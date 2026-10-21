@@ -48,7 +48,10 @@ body {
   overflow-x: hidden;
 }
 
-body, button, input, textarea, select { font-family: Inter, "Segoe UI", Arial, sans-serif; }
+body, button, input, textarea, select {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
 a { color: inherit; text-decoration: none; }
 img, video { max-width: 100%; display: block; }
 button, input, textarea, select { font: inherit; }
@@ -139,7 +142,7 @@ p { color: var(--muted); }
   margin-top: 25px;
 }
 
-/* Top announcement strip */
+/* Announcement strip */
 .topline {
   background: var(--navy);
   color: #dce8f8;
@@ -403,7 +406,7 @@ header {
   font-weight: 750;
 }
 
-/* Company values */
+/* Core values */
 .value-strip {
   background: white;
   border-bottom: 1px solid var(--line);
@@ -472,6 +475,7 @@ header {
 
 .identity-row:last-child { border-bottom: 0; }
 .identity-row span { color: #b9cce5; font-size: .84rem; }
+
 .identity-row strong {
   max-width: 60%;
   text-align: right;
@@ -562,49 +566,63 @@ header {
 
 .process-step p { font-size: .86rem; }
 
-/* Projects and video */
+/* Projects gallery: four independent photographs */
 .gallery-grid {
   display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 24px;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 28px;
 }
 
-.gallery-main, .gallery-side { min-width: 0; }
+.gallery-card {
+  min-width: 0;
+  overflow: hidden;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: 0 10px 30px rgba(7,27,59,.06);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
 
 .gallery-photo {
   width: 100%;
-  height: 410px;
+  height: 300px;
   object-fit: cover;
-  border-radius: var(--radius);
+  object-position: center;
+  border-radius: 15px;
   background: #dbe5f0;
 }
 
-.gallery-caption { margin-top: 15px; }
+.gallery-caption { padding: 15px 5px 5px; }
+
 .gallery-caption h3 {
   color: var(--navy);
   font-size: 1.18rem;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
 }
 
 .gallery-caption p { font-size: .9rem; }
 
-.gallery-side {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.gallery-note {
+  margin-top: 30px;
   padding: 30px;
   border-radius: var(--radius);
-  background: var(--navy);
   color: white;
+  background: var(--navy);
 }
 
-.gallery-side h3 {
-  font-size: 1.65rem;
-  margin: 15px 0;
+.gallery-note h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
 }
 
-.gallery-side p { color: #c8d7eb; }
-.gallery-side .kicker { color: #ff7c87; }
+.gallery-note p { color: #c8d7eb; }
+
 .video-section { margin-top: 38px; }
 
 .company-video {
@@ -663,7 +681,7 @@ header {
 .partner-card p { margin-bottom: 17px; }
 .partner-section .kicker { color: #ff8791; }
 
-/* Leadership: three full portrait cards */
+/* Leadership */
 #leadership { background: #fff; }
 
 .leader-grid {
@@ -690,7 +708,7 @@ header {
   box-shadow: var(--shadow);
 }
 
-/* Portrait frame — never force a face into a wide crop */
+/* Portrait frame keeps complete photos visible */
 .leader-photo-frame {
   width: 100%;
   height: 340px;
@@ -790,6 +808,7 @@ header {
 }
 
 .contact-item:last-child { border-bottom: 0; }
+
 .contact-item small {
   display: block;
   color: #b8cce7;
@@ -959,6 +978,7 @@ footer {
   .process-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .leader-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .leader-photo-frame { height: 330px; }
+  .gallery-photo { height: 270px; }
 }
 
 /* Mobile navigation and layouts */
@@ -1009,7 +1029,7 @@ footer {
   .hero { padding: 65px 0 55px; }
 
   .hero-grid, .about-grid, .partner-grid,
-  .contact-grid, .gallery-grid {
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1024,8 +1044,7 @@ footer {
   .value-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
 
   .about-grid, .partner-grid { gap: 30px; }
-  .gallery-photo { height: 310px; }
-  .gallery-side { padding: 26px; }
+  .gallery-photo { height: 280px; }
 
   .leader-grid {
     grid-template-columns: repeat(2,minmax(0,1fr));
@@ -1049,8 +1068,9 @@ footer {
   .hero-photo { height: 280px; }
   .floating-card { padding: 10px; }
   .floating-card .symbol { width: 32px; height: 32px; }
+
   .service-grid, .process-grid, .form-grid,
-  .leader-grid {
+  .leader-grid, .gallery-grid {
     grid-template-columns: minmax(0,1fr);
   }
 
@@ -1069,9 +1089,17 @@ footer {
   .leader-content h3 { font-size: 1.15rem; }
   .form-field.full { grid-column: auto; }
   .identity-card, .contact-info, .contact-form { padding: 22px; }
+
   .identity-row { flex-direction: column; gap: 4px; }
   .identity-row strong { max-width: 100%; text-align: left; }
-  .wa { width: 52px; height: 52px; right: 14px; bottom: 14px; }
+
+  .wa {
+    width: 52px;
+    height: 52px;
+    right: 14px;
+    bottom: 14px;
+  }
+
   .footer-links { gap: 13px; }
 }
 
@@ -1428,7 +1456,7 @@ footer {
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- PROJECTS: ONE EXISTING PHOTO + THREE NEW PHOTO SLOTS -->
 <section class="band" id="projects">
   <div class="container">
 
@@ -1436,18 +1464,18 @@ footer {
       <span class="kicker">Our work</span>
       <h2>Practical experience.<br>A growing capability.</h2>
       <p>
-        Our practical experience includes solar installation,
-        electrical wiring, device installation and related
-        technical work in Nigeria.
+        Explore our solar installation projects, electrical work
+        and customer-focused technical solutions.
       </p>
     </div>
 
     <div class="gallery-grid">
 
-      <div class="gallery-main reveal">
+      <!-- EXISTING PROJECT PHOTO -->
+      <article class="gallery-card reveal">
         <img class="gallery-photo"
-          src="solar-installation.jpg"
-          alt="Solar installation work associated with NCE SkyVolt Dynamics Ltd"
+          src="solar-project-1.jpg"
+          alt="Solar energy installation project"
           loading="lazy">
 
         <div class="gallery-caption">
@@ -1457,22 +1485,70 @@ footer {
             customer-focused technical solutions.
           </p>
         </div>
-      </div>
+      </article>
 
-      <div class="gallery-side reveal delay-1">
-        <span class="kicker">Growing through partnerships</span>
-        <h3>Building capability one project at a time.</h3>
-        <p>
-          We are committed to developing our delivery capability
-          through practical experience, responsible collaboration
-          and continuous learning.
-        </p>
+      <!-- NEW PHOTO SLOT 1 -->
+      <article class="gallery-card reveal delay-1">
+        <img class="gallery-photo"
+          src="solar-project-2.jpg"
+          alt="Solar installation project number two"
+          loading="lazy">
 
-        <div class="buttons">
-          <a class="btn btn-white" href="#contact">Discuss a Project ↗</a>
+        <div class="gallery-caption">
+          <h3>Solar Installation Project</h3>
+          <p>
+            A showcase of our solar installation work and
+            renewable-energy solutions.
+          </p>
         </div>
-      </div>
+      </article>
 
+      <!-- NEW PHOTO SLOT 2 -->
+      <article class="gallery-card reveal">
+        <img class="gallery-photo"
+          src="solar-project-3.jpg"
+          alt="Solar panels and electrical installation"
+          loading="lazy">
+
+        <div class="gallery-caption">
+          <h3>Electrical & Solar Systems</h3>
+          <p>
+            Highlighting the equipment, installation and
+            technical details of a project.
+          </p>
+        </div>
+      </article>
+
+      <!-- NEW PHOTO SLOT 3 -->
+      <article class="gallery-card reveal delay-1">
+        <img class="gallery-photo"
+          src="solar-project-4.jpg"
+          alt="Additional solar energy project"
+          loading="lazy">
+
+        <div class="gallery-caption">
+          <h3>Renewable Energy Project</h3>
+          <p>
+            Another example of practical solar energy and
+            power solutions.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="gallery-note reveal">
+      <span class="kicker">Growing through partnerships</span>
+      <h3>Building capability one project at a time.</h3>
+      <p>
+        We are committed to developing our delivery capability
+        through practical experience, responsible collaboration
+        and continuous learning.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-white" href="#contact">Discuss a Project ↗</a>
+      </div>
     </div>
 
     <div class="video-section reveal">
@@ -1542,7 +1618,7 @@ footer {
   </div>
 </section>
 
-<!-- LEADERSHIP: THREE PORTRAITS -->
+<!-- LEADERSHIP -->
 <section id="leadership">
   <div class="container">
 
@@ -1557,7 +1633,7 @@ footer {
 
     <div class="leader-grid">
 
-      <!-- LEADER ONE: CEO -->
+      <!-- CEO -->
       <article class="leader-main reveal">
         <div class="leader-photo-frame">
           <img class="leader-photo"
@@ -1578,7 +1654,7 @@ footer {
         </div>
       </article>
 
-      <!-- LEADER TWO: SECRETARY -->
+      <!-- COMPANY SECRETARY -->
       <article class="leader-small reveal delay-1">
         <div class="leader-photo-frame">
           <img class="leader-photo"
@@ -1598,7 +1674,7 @@ footer {
         </div>
       </article>
 
-      <!-- LEADER THREE: MEDIA AND TECH MANAGER -->
+      <!-- MEDIA AND TECH MANAGER -->
       <article class="leader-small reveal delay-2">
         <div class="leader-photo-frame">
           <img class="leader-photo"
