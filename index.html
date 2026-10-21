@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>NCE SkyVolt Dynamics Ltd | Engineering, Energy & Technology</title>
-<meta name="description" content="NCE SkyVolt Dynamics Ltd provides practical solar energy, electrical, inverter, battery, backup power and technology solutions in Nigeria.">
+<meta name="description" content="NCE SkyVolt Dynamics Ltd provides solar energy, electrical, inverter, battery, backup power, engineering and technology solutions in Nigeria.">
 <meta name="theme-color" content="#071b3b">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://nceskyvoltdynamics.github.io/nce-skyvolt-dynamics/">
@@ -24,7 +24,7 @@
   --navy2: #0b2b5b;
   --blue: #1459a8;
   --red: #e32636;
-  --white: #ffffff;
+  --white: #fff;
   --ink: #14243a;
   --muted: #66758a;
   --light: #f4f7fb;
@@ -37,7 +37,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 95px;
 }
 
 body {
@@ -49,19 +49,21 @@ body {
 }
 
 body, button, input, textarea, select { font-family: Inter, "Segoe UI", Arial, sans-serif; }
-
 a { color: inherit; text-decoration: none; }
 img, video { max-width: 100%; display: block; }
 button, input, textarea, select { font: inherit; }
+section { padding: 88px 0; }
 
 .container {
   width: min(1160px, 91%);
   margin: 0 auto;
 }
 
-section { padding: 96px 0; }
+h1, h2, h3 {
+  line-height: 1.18;
+  letter-spacing: -.035em;
+}
 
-h1, h2, h3 { line-height: 1.15; letter-spacing: -.035em; }
 h2 { font-size: clamp(2rem, 4vw, 3.1rem); }
 p { color: var(--muted); }
 
@@ -71,38 +73,42 @@ p { color: var(--muted); }
   gap: 10px;
   color: var(--red);
   text-transform: uppercase;
-  letter-spacing: .15em;
+  letter-spacing: .13em;
   font-weight: 800;
-  font-size: .75rem;
+  font-size: .74rem;
 }
 
 .kicker::before {
   content: "";
-  width: 27px;
+  width: 26px;
   height: 3px;
   background: var(--red);
   border-radius: 9px;
 }
 
 .section-head {
-  max-width: 720px;
-  margin: 0 auto 46px;
+  max-width: 740px;
+  margin: 0 auto 45px;
   text-align: center;
 }
 
-.section-head h2 { margin: 15px 0; color: var(--navy); }
-.section-head p { font-size: 1.02rem; }
+.section-head h2 {
+  margin: 15px 0;
+  color: var(--navy);
+}
+
+.section-head p { font-size: 1rem; }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px 23px;
+  gap: 9px;
+  padding: 13px 22px;
   border: 1px solid transparent;
   border-radius: 999px;
   font-weight: 750;
-  font-size: .93rem;
+  font-size: .91rem;
   cursor: pointer;
   transition: transform .25s, background .25s, box-shadow .25s;
 }
@@ -112,43 +118,38 @@ p { color: var(--muted); }
 .btn-primary {
   color: white;
   background: var(--red);
-  box-shadow: 0 9px 25px rgba(227,38,54,.24);
+  box-shadow: 0 9px 25px rgba(227,38,54,.22);
 }
 
 .btn-primary:hover { background: #c91d2d; }
-
-.btn-white {
-  color: var(--navy);
-  background: white;
-}
+.btn-white { color: var(--navy); background: white; }
 
 .btn-outline {
   color: white;
-  border-color: rgba(255,255,255,.48);
-  background: rgba(255,255,255,.04);
+  border-color: rgba(255,255,255,.45);
+  background: rgba(255,255,255,.05);
 }
 
 .btn-outline:hover { background: rgba(255,255,255,.13); }
 
 .buttons {
   display: flex;
-  gap: 13px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-top: 27px;
+  margin-top: 25px;
 }
 
-/* Announcement strip */
+/* Top announcement strip */
 .topline {
   background: var(--navy);
   color: #dce8f8;
   font-size: .77rem;
-  letter-spacing: .04em;
 }
 
 .topline-inner {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 15px;
   padding: 9px 0;
   flex-wrap: wrap;
 }
@@ -160,80 +161,81 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255,255,255,.96);
+  background: rgba(255,255,255,.97);
   backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(226,232,240,.85);
+  border-bottom: 1px solid var(--line);
 }
 
 .nav {
-  min-height: 82px;
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 25px;
+  gap: 22px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 11px;
   min-width: 0;
 }
 
 .brand img {
-  width: 54px;
-  height: 54px;
+  width: 53px;
+  height: 53px;
   object-fit: contain;
-  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .brand-copy strong {
   display: block;
   color: var(--navy);
-  font-size: .98rem;
-  letter-spacing: .025em;
+  font-size: .96rem;
   line-height: 1.3;
+  letter-spacing: .015em;
 }
 
 .brand-copy small {
   display: block;
   margin-top: 4px;
-  font-size: .64rem;
-  letter-spacing: .12em;
-  font-weight: 800;
   color: var(--red);
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .09em;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 }
 
 .nav-links a {
-  font-size: .87rem;
-  font-weight: 700;
   color: #3a4a61;
+  font-size: .84rem;
+  font-weight: 700;
   transition: color .2s;
 }
 
 .nav-links a:hover { color: var(--red); }
 
 .nav-links .nav-cta {
-  padding: 11px 17px;
-  background: var(--navy);
+  padding: 10px 16px;
   color: white;
+  background: var(--navy);
   border-radius: 999px;
 }
 
 .menu-toggle {
   display: none;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
   border: 0;
+  border-radius: 12px;
   background: var(--light);
   color: var(--navy);
-  width: 45px;
-  height: 45px;
-  border-radius: 12px;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -243,7 +245,7 @@ header {
   position: relative;
   overflow: hidden;
   color: white;
-  padding: 95px 0 86px;
+  padding: 92px 0 80px;
   background:
     radial-gradient(ellipse at 85% 15%, rgba(31,111,202,.34), transparent 36%),
     radial-gradient(ellipse at 10% 100%, rgba(227,38,54,.13), transparent 35%),
@@ -255,12 +257,11 @@ header {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: .14;
+  opacity: .12;
   background-image:
     linear-gradient(rgba(255,255,255,.13) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.13) 1px, transparent 1px);
   background-size: 55px 55px;
-  mask-image: linear-gradient(90deg, transparent, black);
 }
 
 .hero-grid {
@@ -268,15 +269,15 @@ header {
   display: grid;
   grid-template-columns: 1.05fr .95fr;
   align-items: center;
-  gap: 60px;
+  gap: 55px;
 }
 
-.hero .kicker { color: #ff7c87; }
+.hero .kicker { color: #ff8791; }
 
 .hero h1 {
   max-width: 690px;
   margin: 22px 0;
-  font-size: clamp(2.7rem, 5.2vw, 4.8rem);
+  font-size: clamp(2.65rem, 5.2vw, 4.65rem);
   font-weight: 850;
   letter-spacing: -.055em;
 }
@@ -286,16 +287,16 @@ header {
 .hero-copy > p {
   max-width: 600px;
   color: #d1dced;
-  font-size: 1.06rem;
+  font-size: 1.04rem;
 }
 
 .hero-note {
   display: flex;
   align-items: center;
   gap: 11px;
-  margin-top: 28px;
+  margin-top: 26px;
   color: #d9e6f6;
-  font-size: .86rem;
+  font-size: .85rem;
 }
 
 .status-dot {
@@ -307,16 +308,13 @@ header {
   box-shadow: 0 0 0 5px rgba(98,223,177,.13);
 }
 
-.hero-visual {
-  position: relative;
-  min-width: 0;
-}
+.hero-visual { position: relative; min-width: 0; }
 
 .hero-photo-wrap {
   position: relative;
-  border: 1px solid rgba(255,255,255,.24);
-  border-radius: 28px;
   padding: 10px;
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius: 27px;
   background: rgba(255,255,255,.08);
   box-shadow: 0 35px 90px rgba(0,0,0,.25);
   animation: float 6s ease-in-out infinite;
@@ -326,7 +324,7 @@ header {
   width: 100%;
   height: 420px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 19px;
   background: #17355c;
 }
 
@@ -334,41 +332,41 @@ header {
   content: "";
   position: absolute;
   inset: 10px;
-  border-radius: 20px;
-  background: linear-gradient(0deg, rgba(5,20,44,.55), transparent 55%);
+  border-radius: 19px;
+  background: linear-gradient(0deg, rgba(5,20,44,.62), transparent 60%);
   pointer-events: none;
 }
 
 .hero-photo-caption {
   position: absolute;
   z-index: 2;
-  left: 30px;
-  bottom: 28px;
+  left: 28px;
+  bottom: 25px;
   color: white;
 }
 
 .hero-photo-caption strong {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.16rem;
 }
 
 .hero-photo-caption span {
   color: #dbe8f7;
-  font-size: .83rem;
+  font-size: .79rem;
 }
 
 .floating-card {
   position: absolute;
   z-index: 3;
-  left: -28px;
-  top: 40px;
+  left: -25px;
+  top: 35px;
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 15px 18px;
+  padding: 14px 17px;
   color: var(--navy);
   background: white;
-  border-radius: 16px;
+  border-radius: 15px;
   box-shadow: var(--shadow);
   animation: bob 4s ease-in-out infinite;
 }
@@ -376,37 +374,36 @@ header {
 .floating-card .symbol {
   display: grid;
   place-items: center;
-  width: 39px;
-  height: 39px;
+  width: 38px;
+  height: 38px;
   border-radius: 12px;
   background: #fff0f1;
   color: var(--red);
   font-size: 1.3rem;
 }
 
-.floating-card strong { display: block; font-size: .9rem; }
-.floating-card small { display: block; color: var(--muted); font-size: .74rem; }
+.floating-card strong { display: block; font-size: .86rem; }
+.floating-card small { display: block; color: var(--muted); font-size: .72rem; }
 
 .hero-bottom {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 24px;
+  gap: 20px;
   flex-wrap: wrap;
-  margin-top: 66px;
-  padding-top: 25px;
+  margin-top: 60px;
+  padding-top: 24px;
   border-top: 1px solid rgba(255,255,255,.2);
 }
 
 .hero-bottom span {
   color: #c8d7eb;
-  font-size: .77rem;
-  letter-spacing: .12em;
+  font-size: .72rem;
+  letter-spacing: .09em;
   font-weight: 750;
 }
 
-/* Quick value strip */
+/* Company values */
 .value-strip {
   background: white;
   border-bottom: 1px solid var(--line);
@@ -418,76 +415,81 @@ header {
 }
 
 .value-item {
-  padding: 27px 18px;
+  padding: 25px 15px;
   text-align: center;
   border-right: 1px solid var(--line);
 }
 
 .value-item:last-child { border-right: 0; }
-.value-item strong { display: block; color: var(--navy); font-size: .98rem; }
+.value-item strong { display: block; color: var(--navy); }
 .value-item span { color: var(--muted); font-size: .8rem; }
 
 /* About */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 55px;
   align-items: start;
 }
 
 .about-copy h3 {
   color: var(--navy);
   font-size: 1.4rem;
-  margin: 25px 0 12px;
+  margin: 22px 0 12px;
 }
 
-.about-copy p { margin-bottom: 16px; }
+.about-copy p { margin-bottom: 15px; }
 
 .about-highlight {
-  margin-top: 25px;
-  padding: 24px;
+  margin-top: 24px;
+  padding: 23px;
   border-left: 4px solid var(--red);
   background: var(--light);
-  border-radius: 0 16px 16px 0;
+  border-radius: 0 15px 15px 0;
 }
 
 .about-highlight strong { color: var(--navy); }
-.about-highlight p { margin-top: 7px; }
+.about-highlight p { margin: 7px 0 0; }
 
 .identity-card {
-  background: var(--navy);
+  padding: 30px;
   color: white;
+  background: var(--navy);
   border-radius: var(--radius);
-  padding: 32px;
   box-shadow: var(--shadow);
 }
 
-.identity-card h3 { font-size: 1.4rem; margin-bottom: 22px; }
+.identity-card h3 { font-size: 1.4rem; margin-bottom: 18px; }
 
 .identity-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20px;
-  padding: 15px 0;
+  gap: 18px;
+  padding: 14px 0;
   border-bottom: 1px solid rgba(255,255,255,.15);
 }
 
 .identity-row:last-child { border-bottom: 0; }
-.identity-row span { color: #b9cce5; font-size: .86rem; }
-.identity-row strong { text-align: right; font-size: .9rem; }
+.identity-row span { color: #b9cce5; font-size: .84rem; }
+.identity-row strong {
+  max-width: 60%;
+  text-align: right;
+  font-size: .86rem;
+  overflow-wrap: anywhere;
+}
 
 /* Services */
 .band { background: var(--light); }
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3,minmax(0,1fr));
   gap: 21px;
 }
 
 .service-card {
-  padding: 29px;
+  padding: 28px;
   background: white;
   border: 1px solid var(--line);
   border-radius: 19px;
@@ -495,7 +497,7 @@ header {
 }
 
 .service-card:hover {
-  transform: translateY(-7px);
+  transform: translateY(-6px);
   border-color: #cbd8e8;
   box-shadow: var(--shadow);
 }
@@ -503,61 +505,71 @@ header {
 .service-icon {
   display: grid;
   place-items: center;
-  width: 53px;
-  height: 53px;
-  border-radius: 16px;
-  margin-bottom: 21px;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+  border-radius: 15px;
   color: var(--red);
   background: #fff0f1;
-  font-size: 1.55rem;
+  font-size: 1.5rem;
 }
 
-.service-card h3 { color: var(--navy); font-size: 1.15rem; margin-bottom: 11px; }
-.service-card p { font-size: .93rem; }
-.service-card .service-number {
+.service-number {
   display: block;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   color: #8b9ab0;
-  font-size: .72rem;
+  font-size: .7rem;
   font-weight: 800;
   letter-spacing: .12em;
 }
 
-/* Process */
+.service-card h3 {
+  color: var(--navy);
+  font-size: 1.12rem;
+  margin-bottom: 10px;
+}
+
+.service-card p { font-size: .91rem; }
+
+/* Work process */
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 19px;
 }
 
 .process-step {
-  padding: 25px 20px;
+  padding: 24px 20px;
   border-top: 3px solid var(--red);
   background: white;
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 5px 20px rgba(7,27,59,.04);
 }
 
 .process-step span {
   display: inline-block;
   color: var(--red);
   font-weight: 850;
-  font-size: .8rem;
-  margin-bottom: 15px;
+  font-size: .78rem;
+  margin-bottom: 14px;
 }
 
-.process-step h3 { color: var(--navy); font-size: 1.08rem; margin-bottom: 10px; }
-.process-step p { font-size: .88rem; }
+.process-step h3 {
+  color: var(--navy);
+  font-size: 1.05rem;
+  margin-bottom: 9px;
+}
 
-/* Project images and video */
+.process-step p { font-size: .86rem; }
+
+/* Projects and video */
 .gallery-grid {
   display: grid;
   grid-template-columns: 1.2fr .8fr;
   gap: 24px;
 }
 
-.gallery-main, .gallery-side {
-  min-width: 0;
-}
+.gallery-main, .gallery-side { min-width: 0; }
 
 .gallery-photo {
   width: 100%;
@@ -568,24 +580,32 @@ header {
 }
 
 .gallery-caption { margin-top: 15px; }
-.gallery-caption h3 { color: var(--navy); font-size: 1.2rem; margin-bottom: 6px; }
-.gallery-caption p { font-size: .91rem; }
+.gallery-caption h3 {
+  color: var(--navy);
+  font-size: 1.18rem;
+  margin-bottom: 6px;
+}
+
+.gallery-caption p { font-size: .9rem; }
 
 .gallery-side {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 32px;
+  padding: 30px;
   border-radius: var(--radius);
   background: var(--navy);
   color: white;
 }
 
-.gallery-side h3 { font-size: 1.65rem; margin: 15px 0; }
+.gallery-side h3 {
+  font-size: 1.65rem;
+  margin: 15px 0;
+}
+
 .gallery-side p { color: #c8d7eb; }
 .gallery-side .kicker { color: #ff7c87; }
-
-.video-section { margin-top: 35px; }
+.video-section { margin-top: 38px; }
 
 .company-video {
   width: 100%;
@@ -594,7 +614,7 @@ header {
   border-radius: var(--radius);
 }
 
-/* Partnership */
+/* Partnerships */
 .partner-section {
   position: relative;
   overflow: hidden;
@@ -607,13 +627,17 @@ header {
 .partner-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 55px;
+  gap: 50px;
   align-items: center;
 }
 
 .partner-section h2 { margin: 18px 0; }
 .partner-section p { color: #cfdbec; }
-.partner-list { list-style: none; margin-top: 24px; }
+
+.partner-list {
+  list-style: none;
+  margin-top: 23px;
+}
 
 .partner-list li {
   padding: 11px 0;
@@ -629,58 +653,95 @@ header {
 }
 
 .partner-card {
-  padding: 32px;
-  border-radius: var(--radius);
+  padding: 30px;
   border: 1px solid rgba(255,255,255,.18);
+  border-radius: var(--radius);
   background: rgba(255,255,255,.07);
 }
 
-.partner-card h3 { font-size: 1.35rem; margin-bottom: 15px; }
-.partner-card p { margin-bottom: 20px; }
+.partner-card h3 { font-size: 1.35rem; margin-bottom: 14px; }
+.partner-card p { margin-bottom: 17px; }
+.partner-section .kicker { color: #ff8791; }
 
-/* Leadership */
+/* Leadership: three full portrait cards */
+#leadership { background: #fff; }
+
 .leader-grid {
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 25px;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  align-items: stretch;
+  gap: 24px;
 }
 
 .leader-main, .leader-small {
+  min-width: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: white;
+  box-shadow: 0 12px 35px rgba(7,27,59,.07);
+  transition: transform .3s, box-shadow .3s;
 }
 
-.leader-main img {
+.leader-main:hover, .leader-small:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+/* Portrait frame — never force a face into a wide crop */
+.leader-photo-frame {
   width: 100%;
-  height: 335px;
-  object-fit: cover;
-  object-position: center 35%;
-  background: #e8eef6;
+  height: 340px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #eef2f7;
+  border-bottom: 1px solid var(--line);
 }
 
-.leader-content { padding: 27px; }
-.leader-side { display: grid; gap: 20px; }
+.leader-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  border-radius: 10px;
+}
 
-.leader-small { padding: 28px; }
+.leader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  padding: 24px;
+}
 
 .role {
   display: inline-block;
   color: var(--red);
-  font-size: .75rem;
+  font-size: .7rem;
   font-weight: 850;
-  letter-spacing: .1em;
+  letter-spacing: .075em;
+  line-height: 1.6;
   text-transform: uppercase;
 }
 
-.leader-content h3, .leader-small h3 {
+.leader-content h3 {
   color: var(--navy);
-  font-size: 1.25rem;
-  margin: 9px 0 12px;
+  font-size: 1.12rem;
+  line-height: 1.45;
+  margin: 10px 0 12px;
+  overflow-wrap: anywhere;
 }
 
-.leader-content p, .leader-small p { font-size: .92rem; }
+.leader-content p {
+  font-size: .9rem;
+  line-height: 1.75;
+}
 
 /* Media */
 .media-card {
@@ -688,45 +749,58 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 28px;
-  padding: 38px;
+  padding: 35px;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   background: white;
-  border: 1px solid var(--line);
 }
 
-.media-card h3 { color: var(--navy); font-size: 1.7rem; margin: 12px 0; }
+.media-card h3 {
+  color: var(--navy);
+  font-size: 1.65rem;
+  margin: 12px 0;
+}
+
 .media-card p { max-width: 610px; }
 
 /* Contact */
 .contact-grid {
   display: grid;
   grid-template-columns: .85fr 1.15fr;
-  gap: 35px;
+  gap: 32px;
   align-items: start;
 }
 
 .contact-info {
-  padding: 31px;
+  padding: 29px;
   border-radius: var(--radius);
   background: var(--navy);
   color: white;
 }
 
-.contact-info h3 { font-size: 1.35rem; margin-bottom: 20px; }
+.contact-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
 
 .contact-item {
-  padding: 16px 0;
+  padding: 15px 0;
   border-bottom: 1px solid rgba(255,255,255,.15);
   overflow-wrap: anywhere;
 }
 
 .contact-item:last-child { border-bottom: 0; }
-.contact-item small { display: block; color: #b8cce7; margin-bottom: 5px; }
+.contact-item small {
+  display: block;
+  color: #b8cce7;
+  margin-bottom: 5px;
+}
+
 .contact-item a { color: white; }
 .contact-item a:hover { color: #ff818c; }
 
 .contact-form {
-  padding: 30px;
+  padding: 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -736,7 +810,7 @@ header {
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 17px;
 }
 
 .form-field { min-width: 0; }
@@ -746,15 +820,15 @@ label {
   display: block;
   color: var(--navy);
   font-weight: 750;
-  font-size: .84rem;
+  font-size: .83rem;
   margin-bottom: 7px;
 }
 
 input, textarea, select {
   width: 100%;
-  padding: 13px 14px;
+  padding: 12px 13px;
   border: 1px solid #d8e0ea;
-  border-radius: 11px;
+  border-radius: 10px;
   color: var(--ink);
   background: #fbfcfe;
   outline: none;
@@ -766,12 +840,13 @@ input:focus, textarea:focus, select:focus {
   box-shadow: 0 0 0 3px rgba(20,89,168,.1);
 }
 
-textarea { min-height: 140px; resize: vertical; }
+textarea { min-height: 135px; resize: vertical; }
 .form-status { margin-top: 12px; font-size: .88rem; }
+button:disabled { cursor: wait; }
 
 /* Footer */
 footer {
-  padding: 40px 0 22px;
+  padding: 38px 0 22px;
   color: white;
   background: #041127;
 }
@@ -780,30 +855,33 @@ footer {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 35px;
+  gap: 30px;
   flex-wrap: wrap;
-  padding-bottom: 30px;
+  padding-bottom: 28px;
 }
 
 .footer-brand {
   display: flex;
-  gap: 14px;
   align-items: center;
+  gap: 13px;
 }
 
 .footer-brand img {
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
+  width: 55px;
+  height: 55px;
   object-fit: contain;
-  background: white;
 }
 
 .footer-brand strong { display: block; }
-.footer-brand small { color: #aebed4; }
+.footer-brand small { color: #aebed4; font-size: .72rem; }
 
-.footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
-.footer-links a { color: #d4dfef; font-size: .87rem; }
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+.footer-links a { color: #d4dfef; font-size: .85rem; }
 .footer-links a:hover { color: white; }
 
 .footer-bottom {
@@ -811,37 +889,37 @@ footer {
   justify-content: space-between;
   gap: 15px;
   flex-wrap: wrap;
-  padding-top: 20px;
+  padding-top: 19px;
   border-top: 1px solid rgba(255,255,255,.13);
   color: #9eb0c8;
-  font-size: .8rem;
+  font-size: .79rem;
 }
 
-/* WhatsApp */
+/* Floating WhatsApp button */
 .wa {
   position: fixed;
   z-index: 900;
-  right: 22px;
-  bottom: 22px;
+  right: 21px;
+  bottom: 21px;
   display: grid;
   place-items: center;
-  width: 59px;
-  height: 59px;
+  width: 57px;
+  height: 57px;
   color: white;
   background: #1faa67;
   border-radius: 50%;
   box-shadow: 0 10px 30px rgba(0,0,0,.2);
-  font-size: 1.7rem;
+  font-size: 1.65rem;
   transition: transform .25s;
 }
 
-.wa:hover { transform: translateY(-5px) scale(1.04); }
+.wa:hover { transform: translateY(-4px) scale(1.04); }
 
-/* Scroll reveal animations */
+/* Scroll reveal */
 .reveal {
   opacity: 0;
-  transform: translateY(26px);
-  transition: opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1);
+  transform: translateY(22px);
+  transition: opacity .7s ease, transform .7s ease;
 }
 
 .reveal.visible {
@@ -855,43 +933,49 @@ footer {
 
 @keyframes float {
   0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-9px); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes bob {
-  0%,100% { transform: translateY(0) rotate(-1deg); }
-  50% { transform: translateY(-8px) rotate(1deg); }
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.hero-copy { animation: slideIn .8s ease both; }
-.hero-visual { animation: slideIn .95s ease .12s both; }
+.hero-copy { animation: slideIn .7s ease both; }
+.hero-visual { animation: slideIn .9s ease .1s both; }
 
-/* Responsive */
+/* Tablet */
 @media (max-width: 1000px) {
-  .nav-links { gap: 14px; }
-  .nav-links a { font-size: .8rem; }
-  .hero-grid { gap: 35px; }
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: .77rem; }
+  .hero-grid { gap: 32px; }
   .hero-photo { height: 360px; }
-  .service-grid { grid-template-columns: repeat(2,1fr); }
-  .process-grid { grid-template-columns: repeat(2,1fr); }
+  .service-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .process-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .leader-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .leader-photo-frame { height: 330px; }
 }
 
+/* Mobile navigation and layouts */
 @media (max-width: 780px) {
-  section { padding: 72px 0; }
+  section { padding: 68px 0; }
 
-  .topline-inner { justify-content: center; text-align: center; }
+  .topline-inner {
+    justify-content: center;
+    text-align: center;
+  }
 
-  .nav { min-height: 73px; }
-  .brand img { width: 46px; height: 46px; }
-  .brand-copy strong { font-size: .83rem; }
-  .brand-copy small { font-size: .56rem; }
+  .nav { min-height: 72px; }
+  .brand img { width: 45px; height: 45px; }
+  .brand-copy strong { font-size: .78rem; }
+  .brand-copy small { font-size: .52rem; letter-spacing: .05em; }
 
-  .menu-toggle { display: block; flex-shrink: 0; }
+  .menu-toggle { display: block; }
 
   .nav-links {
     position: absolute;
@@ -911,55 +995,87 @@ footer {
   .nav-links.open { display: flex; }
 
   .nav-links a {
-    padding: 13px 5px;
-    font-size: .95rem;
+    padding: 12px 5px;
+    font-size: .94rem;
     border-bottom: 1px solid #edf1f6;
   }
 
   .nav-links .nav-cta {
-    margin-top: 12px;
+    margin-top: 11px;
     text-align: center;
     border: 0;
   }
 
-  .hero { padding: 70px 0 60px; }
-  .hero-grid, .about-grid, .partner-grid, .leader-grid, .contact-grid, .gallery-grid {
+  .hero { padding: 65px 0 55px; }
+
+  .hero-grid, .about-grid, .partner-grid,
+  .contact-grid, .gallery-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero-grid { gap: 45px; }
-  .hero h1 { font-size: clamp(2.6rem, 11vw, 4rem); }
+  .hero-grid { gap: 42px; }
+  .hero h1 { font-size: clamp(2.5rem, 10vw, 3.8rem); }
   .hero-photo { height: 340px; }
-  .floating-card { left: -8px; top: 20px; }
-  .hero-bottom { margin-top: 45px; }
+  .floating-card { left: -5px; top: 18px; }
+  .hero-bottom { margin-top: 42px; }
 
-  .value-grid { grid-template-columns: repeat(2,1fr); }
+  .value-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .value-item:nth-child(2) { border-right: 0; }
   .value-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
 
-  .about-grid, .partner-grid { gap: 32px; }
-  .service-grid { grid-template-columns: 1fr; }
-  .process-grid { grid-template-columns: 1fr 1fr; }
+  .about-grid, .partner-grid { gap: 30px; }
   .gallery-photo { height: 310px; }
-  .gallery-side { padding: 27px; }
-  .leader-main img { height: 310px; }
-  .media-card { flex-direction: column; align-items: flex-start; padding: 27px; }
+  .gallery-side { padding: 26px; }
+
+  .leader-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 18px;
+  }
+
+  .leader-photo-frame { height: 290px; }
+  .leader-content { padding: 19px; }
+  .leader-content h3 { font-size: 1.05rem; }
+
+  .media-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26px;
+  }
 }
 
-@media (max-width: 460px) {
-  .container { width: 90%; }
+/* Small phones */
+@media (max-width: 520px) {
+  .container { width: 91%; }
   .hero-photo { height: 280px; }
-  .floating-card { padding: 11px; }
+  .floating-card { padding: 10px; }
   .floating-card .symbol { width: 32px; height: 32px; }
-  .process-grid, .form-grid { grid-template-columns: 1fr; }
+  .service-grid, .process-grid, .form-grid,
+  .leader-grid {
+    grid-template-columns: minmax(0,1fr);
+  }
+
+  .leader-grid {
+    max-width: 390px;
+    margin: 0 auto;
+    gap: 22px;
+  }
+
+  .leader-photo-frame {
+    height: 350px;
+    padding: 12px;
+  }
+
+  .leader-content { padding: 23px; }
+  .leader-content h3 { font-size: 1.15rem; }
   .form-field.full { grid-column: auto; }
-  .identity-card, .contact-info, .contact-form { padding: 23px; }
+  .identity-card, .contact-info, .contact-form { padding: 22px; }
   .identity-row { flex-direction: column; gap: 4px; }
-  .identity-row strong { text-align: left; }
-  .wa { width: 53px; height: 53px; right: 15px; bottom: 15px; }
+  .identity-row strong { max-width: 100%; text-align: left; }
+  .wa { width: 52px; height: 52px; right: 14px; bottom: 14px; }
+  .footer-links { gap: 13px; }
 }
 
-/* Respect reduced-motion preferences */
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     scroll-behavior: auto !important;
@@ -967,6 +1083,7 @@ footer {
     animation-iteration-count: 1 !important;
     transition-duration: .01ms !important;
   }
+
   .reveal { opacity: 1; transform: none; }
 }
 </style>
@@ -974,6 +1091,7 @@ footer {
 
 <body>
 
+<!-- ANNOUNCEMENT STRIP -->
 <div class="topline">
   <div class="container topline-inner">
     <span><strong>ENERGY • INNOVATION • RELIABILITY</strong></span>
@@ -981,6 +1099,7 @@ footer {
   </div>
 </div>
 
+<!-- NAVIGATION -->
 <header>
   <div class="container nav">
     <a class="brand" href="#home" aria-label="NCE SkyVolt home">
@@ -991,7 +1110,9 @@ footer {
       </span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation" aria-expanded="false"
+      aria-controls="navLinks">☰</button>
 
     <nav class="nav-links" id="navLinks" aria-label="Main navigation">
       <a href="#about">About</a>
@@ -999,6 +1120,7 @@ footer {
       <a href="#projects">Our Work</a>
       <a href="#partnerships">Partnerships</a>
       <a href="#leadership">Leadership</a>
+      <a href="#media">Media</a>
       <a href="#contact" class="nav-cta">Contact Us ↗</a>
     </nav>
   </div>
@@ -1006,18 +1128,21 @@ footer {
 
 <main>
 
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="container">
     <div class="hero-grid">
+
       <div class="hero-copy">
         <span class="kicker">Engineering • Energy • Technology</span>
 
         <h1>Powering progress.<br><span>Building possibilities.</span></h1>
 
         <p>
-          Practical engineering, solar energy, electrical and power solutions
-          designed around real customer needs. We combine local market
-          understanding with technical capability and responsible partnerships.
+          Practical engineering, solar energy, electrical and power
+          solutions designed around real customer needs. We combine
+          local market understanding with technical capability and
+          responsible partnerships.
         </p>
 
         <div class="buttons">
@@ -1042,15 +1167,17 @@ footer {
 
         <div class="hero-photo-wrap">
           <img class="hero-photo"
-               src="solar-installation.jpg"
-               alt="NCE SkyVolt solar installation and energy work"
-               fetchpriority="high">
+            src="solar-installation.jpg"
+            alt="Solar installation and energy work"
+            fetchpriority="high">
+
           <div class="hero-photo-caption">
             <strong>Technology that works for you.</strong>
             <span>ENERGY • INNOVATION • RELIABILITY</span>
           </div>
         </div>
       </div>
+
     </div>
 
     <div class="hero-bottom">
@@ -1062,6 +1189,7 @@ footer {
   </div>
 </section>
 
+<!-- CORE VALUES -->
 <div class="value-strip">
   <div class="container value-grid">
     <div class="value-item">
@@ -1083,67 +1211,80 @@ footer {
   </div>
 </div>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="container">
+
     <div class="section-head reveal">
       <span class="kicker">Who we are</span>
       <h2>Engineering with purpose.<br>Energy with impact.</h2>
       <p>
-        A Nigerian engineering, energy and technology company focused on
-        practical solutions, dependable service and long-term growth.
+        A Nigerian engineering, energy and technology company focused
+        on practical solutions, dependable service and long-term growth.
       </p>
     </div>
 
     <div class="about-grid">
       <div class="about-copy reveal">
         <h3>Built around practical solutions.</h3>
+
         <p>
-          NCE SkyVolt Dynamics Ltd works across solar energy, electrical
-          systems, inverter and battery solutions, backup power, security
-          technology, telecommunications and related technical services.
+          NCE SkyVolt Dynamics Ltd works across solar energy,
+          electrical systems, inverter and battery solutions, backup
+          power, security technology, telecommunications and related
+          technical services.
         </p>
+
         <p>
-          Our approach starts with understanding the customer's requirements,
-          selecting a suitable solution, coordinating responsible execution
-          and supporting the customer beyond installation.
+          Our approach starts with understanding customer requirements,
+          selecting suitable solutions, coordinating responsible
+          execution and supporting customers beyond installation.
         </p>
+
         <p>
-          We are developing relationships with manufacturers, suppliers and
-          engineering organisations to expand our technical capabilities and
-          serve more customers across Nigeria and, over time, wider markets.
+          We are developing relationships with manufacturers,
+          suppliers and engineering organisations to expand our
+          technical capabilities and serve more customers across
+          Nigeria and, over time, wider markets.
         </p>
 
         <div class="about-highlight">
           <strong>Our guiding principle</strong>
           <p>
             Build trust through practical work, honest communication,
-            responsible partnerships and a commitment to continuous improvement.
+            responsible partnerships and continuous improvement.
           </p>
         </div>
       </div>
 
       <div class="identity-card reveal delay-1">
         <h3>Company identity</h3>
+
         <div class="identity-row">
           <span>Legal name</span>
           <strong>NCE SKYVOLT DYNAMICS LTD</strong>
         </div>
+
         <div class="identity-row">
           <span>CAC / RC number</span>
           <strong>9795739</strong>
         </div>
+
         <div class="identity-row">
           <span>Incorporated</span>
           <strong>21 August 2026</strong>
         </div>
+
         <div class="identity-row">
           <span>Locations</span>
           <strong>Lagos & Enugu, Nigeria</strong>
         </div>
+
         <div class="identity-row">
           <span>Telephone</span>
           <strong>+234 903 937 6516</strong>
         </div>
+
         <div class="identity-row">
           <span>Email</span>
           <strong>nceskyvoltdynamics@gmail.com</strong>
@@ -1153,116 +1294,168 @@ footer {
   </div>
 </section>
 
+<!-- SERVICES -->
 <section class="band" id="services">
   <div class="container">
+
     <div class="section-head reveal">
       <span class="kicker">Our solutions</span>
       <h2>Practical capabilities.<br>Connected solutions.</h2>
       <p>
-        Our service areas focus on useful, field-oriented solutions for
-        homes, businesses and project partners.
+        Our service areas focus on useful, field-oriented solutions
+        for homes, businesses and project partners.
       </p>
     </div>
 
     <div class="service-grid">
+
       <article class="service-card reveal">
         <span class="service-number">01 / ENERGY</span>
         <div class="service-icon">☀</div>
         <h3>Solar Energy</h3>
-        <p>Solar installations and related renewable-energy solutions based on customer requirements and site conditions.</p>
+        <p>
+          Solar installations and renewable-energy solutions based
+          on customer requirements and site conditions.
+        </p>
       </article>
 
       <article class="service-card reveal delay-1">
         <span class="service-number">02 / POWER</span>
         <div class="service-icon">ϟ</div>
         <h3>Inverters & Backup Power</h3>
-        <p>Inverter, backup-power and related electrical solutions for appropriate residential and commercial applications.</p>
+        <p>
+          Inverter, backup-power and related electrical solutions
+          for appropriate residential and commercial applications.
+        </p>
       </article>
 
       <article class="service-card reveal delay-2">
         <span class="service-number">03 / STORAGE</span>
         <div class="service-icon">▣</div>
         <h3>Battery & Energy Storage</h3>
-        <p>Battery solutions for solar applications, backup power and suitable energy-storage requirements.</p>
+        <p>
+          Battery solutions for solar applications, backup power
+          and suitable energy-storage requirements.
+        </p>
       </article>
 
       <article class="service-card reveal">
         <span class="service-number">04 / ELECTRICAL</span>
         <div class="service-icon">⌁</div>
         <h3>Electrical Systems</h3>
-        <p>Electrical wiring, device installation, maintenance and practical technical support.</p>
+        <p>
+          Electrical wiring, device installation, maintenance
+          and practical technical support.
+        </p>
       </article>
 
       <article class="service-card reveal delay-1">
         <span class="service-number">05 / TECHNOLOGY</span>
         <div class="service-icon">◉</div>
         <h3>Security & Telecommunications</h3>
-        <p>CCTV, monitoring, communications and related technology solutions suited to customer needs.</p>
+        <p>
+          CCTV, monitoring, communications and related technology
+          solutions suited to customer needs.
+        </p>
       </article>
 
       <article class="service-card reveal delay-2">
         <span class="service-number">06 / PROCUREMENT</span>
         <div class="service-icon">↗</div>
         <h3>Equipment & Product Supply</h3>
-        <p>Sourcing and reselling selected engineering, electrical and energy products for suitable projects.</p>
+        <p>
+          Sourcing and reselling selected engineering, electrical
+          and energy products for suitable projects.
+        </p>
       </article>
+
     </div>
   </div>
 </section>
 
+<!-- OUR PROCESS -->
 <section id="approach">
   <div class="container">
+
     <div class="section-head reveal">
       <span class="kicker">How we work</span>
       <h2>From requirement to delivery.</h2>
-      <p>A clear, practical approach helps align customer expectations with project requirements.</p>
+      <p>
+        A clear, practical approach helps align customer expectations
+        with project requirements.
+      </p>
     </div>
 
     <div class="process-grid">
+
       <article class="process-step reveal">
         <span>STEP 01</span>
         <h3>Understand</h3>
-        <p>Discuss the customer's requirements, operating conditions, budget and objectives.</p>
+        <p>
+          Discuss customer requirements, operating conditions,
+          budget and objectives.
+        </p>
       </article>
+
       <article class="process-step reveal delay-1">
         <span>STEP 02</span>
         <h3>Plan</h3>
-        <p>Assess suitable solutions, technical requirements, equipment and delivery needs.</p>
+        <p>
+          Assess suitable solutions, technical requirements,
+          equipment and delivery needs.
+        </p>
       </article>
+
       <article class="process-step reveal delay-2">
         <span>STEP 03</span>
         <h3>Execute</h3>
-        <p>Coordinate approved work with appropriate technical resources and clear responsibilities.</p>
+        <p>
+          Coordinate approved work with appropriate technical
+          resources and clear responsibilities.
+        </p>
       </article>
+
       <article class="process-step reveal delay-3">
         <span>STEP 04</span>
         <h3>Support</h3>
-        <p>Provide customer guidance and agreed after-sales support following delivery.</p>
+        <p>
+          Provide customer guidance and agreed after-sales support
+          following delivery.
+        </p>
       </article>
+
     </div>
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section class="band" id="projects">
   <div class="container">
+
     <div class="section-head reveal">
       <span class="kicker">Our work</span>
       <h2>Practical experience.<br>A growing capability.</h2>
       <p>
-        Our practical experience includes solar installation, electrical
-        wiring, device installation and related technical work in Nigeria.
+        Our practical experience includes solar installation,
+        electrical wiring, device installation and related
+        technical work in Nigeria.
       </p>
     </div>
 
     <div class="gallery-grid">
+
       <div class="gallery-main reveal">
         <img class="gallery-photo"
-             src="solar-installation.jpg"
-             alt="Solar installation work associated with NCE SkyVolt Dynamics Ltd"
-             loading="lazy">
+          src="solar-installation.jpg"
+          alt="Solar installation work associated with NCE SkyVolt Dynamics Ltd"
+          loading="lazy">
+
         <div class="gallery-caption">
           <h3>Solar & Energy Solutions</h3>
-          <p>Practical energy-related installation work and customer-focused technical solutions.</p>
+          <p>
+            Practical energy-related installation work and
+            customer-focused technical solutions.
+          </p>
         </div>
       </div>
 
@@ -1270,13 +1463,16 @@ footer {
         <span class="kicker">Growing through partnerships</span>
         <h3>Building capability one project at a time.</h3>
         <p>
-          We are committed to developing our delivery capability through
-          practical experience, responsible collaboration and continuous learning.
+          We are committed to developing our delivery capability
+          through practical experience, responsible collaboration
+          and continuous learning.
         </p>
+
         <div class="buttons">
           <a class="btn btn-white" href="#contact">Discuss a Project ↗</a>
         </div>
       </div>
+
     </div>
 
     <div class="video-section reveal">
@@ -1286,28 +1482,34 @@ footer {
         <p>Explore our company video and practical work.</p>
       </div>
 
-      <video class="company-video" controls preload="metadata" playsinline
-             poster="solar-installation.jpg">
+      <video class="company-video" controls preload="metadata"
+        playsinline poster="solar-installation.jpg">
         <source src="company-video.mp4" type="video/mp4">
         Your browser does not support embedded video.
         <a href="company-video.mp4">Open the company video</a>
       </video>
+
       <p style="font-size:.82rem;margin-top:10px">
-        If no company video has been uploaded yet, add company-video.mp4 to the website repository.
+        Add company-video.mp4 to your website repository
+        when your company video is ready.
       </p>
     </div>
+
   </div>
 </section>
 
+<!-- PARTNERSHIPS -->
 <section class="partner-section" id="partnerships">
   <div class="container partner-grid">
+
     <div class="reveal">
       <span class="kicker">Partnerships & business development</span>
       <h2>Let's build the market together.</h2>
       <p>
-        We welcome conversations with solar manufacturers, equipment suppliers,
-        engineering companies, technology providers and organisations seeking
-        dependable local partners in Nigeria.
+        We welcome conversations with solar manufacturers,
+        equipment suppliers, engineering companies, technology
+        providers and organisations seeking dependable local
+        partners in Nigeria.
       </p>
 
       <ul class="partner-list">
@@ -1322,112 +1524,154 @@ footer {
     <div class="partner-card reveal delay-1">
       <h3>Looking for a local partner?</h3>
       <p>
-        We are interested in structured relationships with clear responsibilities,
-        commercially workable terms and a shared commitment to customer value.
+        We are interested in structured relationships with clear
+        responsibilities, commercially workable terms and a shared
+        commitment to customer value.
       </p>
       <p>
-        We prefer to begin with suitable opportunities, document each project
-        clearly and grow the relationship through demonstrated performance.
+        We prefer to begin with suitable opportunities, document
+        each project clearly and grow relationships through
+        demonstrated performance.
       </p>
+
       <div class="buttons">
         <a class="btn btn-primary" href="#contact">Explore Partnership ↗</a>
       </div>
     </div>
+
   </div>
 </section>
 
+<!-- LEADERSHIP: THREE PORTRAITS -->
 <section id="leadership">
   <div class="container">
+
     <div class="section-head reveal">
-      <span class="kicker">Leadership</span>
-      <h2>The people behind NCE SkyVolt.</h2>
+      <span class="kicker">Our leadership</span>
+      <h2>The People Behind NCE SkyVolt.</h2>
       <p>
-        A developing team bringing together engineering experience,
-        business coordination, technology and digital communication.
+        Meet the team driving our engineering vision, business
+        administration, media, digital presence and technology initiatives.
       </p>
     </div>
 
     <div class="leader-grid">
+
+      <!-- LEADER ONE: CEO -->
       <article class="leader-main reveal">
-        <img src="ceo.jpg"
-             alt="Engr. Chijioke N. E., Chief Executive Officer"
-             loading="lazy">
+        <div class="leader-photo-frame">
+          <img class="leader-photo"
+            src="ceo.jpg"
+            alt="Engr. Chijioke N. E., Chief Executive Officer"
+            loading="lazy">
+        </div>
+
         <div class="leader-content">
           <span class="role">Chief Executive Officer</span>
           <h3>Engr. Chijioke N. E.</h3>
           <p>
-            Leads the company's engineering, energy and business development
-            direction, bringing practical and technical experience, including
-            solar-related work.
+            Leads the company's strategic direction, engineering
+            initiatives, energy solutions and business development.
+            Focuses on building practical capabilities, developing
+            partnerships and creating sustainable business opportunities.
           </p>
         </div>
       </article>
 
-      <div class="leader-side">
-        <article class="leader-small reveal delay-1">
-          <span class="role">Secretary</span>
+      <!-- LEADER TWO: SECRETARY -->
+      <article class="leader-small reveal delay-1">
+        <div class="leader-photo-frame">
+          <img class="leader-photo"
+            src="gerald.jpg"
+            alt="Mr. Nwachukwu Chukwuemeka Gerald, Company Secretary"
+            loading="lazy">
+        </div>
+
+        <div class="leader-content">
+          <span class="role">Company Secretary</span>
           <h3>Mr. Nwachukwu Chukwuemeka Gerald</h3>
           <p>
-            B.Sc. Accounting. Supports administrative coordination,
-            records and organisational operations.
+            A B.Sc. Accounting graduate who supports administrative
+            coordination, company records, documentation and
+            organisational operations.
           </p>
-          <img src="gerald.jpg"
-               alt="Mr. Nwachukwu Chukwuemeka Gerald, Secretary"
-               loading="lazy"
-               style="width:100%;height:230px;object-fit:cover;object-position:center 30%;border-radius:15px;margin-top:20px;background:#e8eef6">
-        </article>
+        </div>
+      </article>
 
-        <article class="leader-small reveal delay-2">
-          <span class="role">Media & Tech Manager</span>
+      <!-- LEADER THREE: MEDIA AND TECH MANAGER -->
+      <article class="leader-small reveal delay-2">
+        <div class="leader-photo-frame">
+          <img class="leader-photo"
+            src="bassey.jpg"
+            alt="Engr. Bassey Josiah Tony, Media and Tech Manager"
+            loading="lazy">
+        </div>
+
+        <div class="leader-content">
+          <span class="role">Media &amp; Tech Manager</span>
           <h3>Engr. Bassey Josiah Tony</h3>
           <p>
-            Aircraft Maintenance Engineering (Avionics) graduate with
-            Distinction. Supports the company's digital presence, media,
-            research and technology-related activities.
+            An Aircraft Maintenance Engineering (Avionics) graduate
+            with Distinction. Supports the company's website,
+            digital media, technology initiatives, research and
+            corporate communications.
           </p>
-        </article>
-      </div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
+<!-- MEDIA -->
 <section class="band" id="media">
   <div class="container">
+
     <div class="media-card reveal">
       <div>
         <span class="kicker">NCE SkyVolt Media</span>
         <h3>Powering the story.<br>Driving the digital future.</h3>
         <p>
-          Our media initiative supports digital communication, technology
-          content, product education and the sharing of useful technical ideas.
+          Our media initiative supports digital communication,
+          technology content, product education and the sharing
+          of useful technical ideas.
         </p>
       </div>
 
       <div class="buttons">
         <a class="btn btn-primary"
-           href="https://www.youtube.com/@nceskyvoltdynamics"
-           target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+          href="https://www.youtube.com/@nceskyvoltdynamics"
+          target="_blank" rel="noopener noreferrer">
+          YouTube ↗
+        </a>
+
         <a class="btn"
-           href="https://www.facebook.com/profile.php?id=61593707054118"
-           target="_blank" rel="noopener noreferrer"
-           style="background:var(--navy);color:white">Facebook ↗</a>
+          href="https://www.facebook.com/profile.php?id=61593707054118"
+          target="_blank" rel="noopener noreferrer"
+          style="background:var(--navy);color:white">
+          Facebook ↗
+        </a>
       </div>
     </div>
+
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="container">
+
     <div class="section-head reveal">
       <span class="kicker">Contact us</span>
       <h2>Let's discuss your next project.</h2>
       <p>
-        For project enquiries, equipment, technical services or partnership
-        opportunities, contact the NCE SkyVolt team.
+        For project enquiries, equipment, technical services or
+        partnership opportunities, contact the NCE SkyVolt team.
       </p>
     </div>
 
     <div class="contact-grid">
+
       <div class="contact-info reveal">
         <h3>NCE SKYVOLT DYNAMICS LTD</h3>
 
@@ -1438,12 +1682,15 @@ footer {
 
         <div class="contact-item">
           <small>Email</small>
-          <a href="mailto:nceskyvoltdynamics@gmail.com">nceskyvoltdynamics@gmail.com</a>
+          <a href="mailto:nceskyvoltdynamics@gmail.com">
+            nceskyvoltdynamics@gmail.com
+          </a>
         </div>
 
         <div class="contact-item">
           <small>Enugu operations</small>
-          FG7M+X9R, Thinkers Corner, Enugu 400103, Enugu, Nigeria
+          FG7M+X9R, Thinkers Corner, Enugu 400103,
+          Enugu, Nigeria
         </div>
 
         <div class="contact-item">
@@ -1459,29 +1706,36 @@ footer {
         <div class="contact-item">
           <small>Business enquiries</small>
           <a href="https://wa.me/2349039376516?text=Hello%20NCE%20SkyVolt%20Dynamics%20Ltd.%20I%20would%20like%20to%20make%20a%20business%20enquiry."
-             target="_blank" rel="noopener noreferrer">Start a WhatsApp conversation ↗</a>
+            target="_blank" rel="noopener noreferrer">
+            Start a WhatsApp conversation ↗
+          </a>
         </div>
       </div>
 
+      <!-- CONTACT FORM -->
       <form class="contact-form reveal delay-1"
-            id="contactForm"
-            action="https://formspree.io/f/xnpjqrjg"
-            method="POST">
+        id="contactForm"
+        action="https://formspree.io/f/xnpjqrjg"
+        method="POST">
 
         <div class="form-grid">
+
           <div class="form-field">
             <label for="name">Full name *</label>
-            <input id="name" name="name" autocomplete="name" required>
+            <input id="name" name="name"
+              autocomplete="name" required>
           </div>
 
           <div class="form-field">
             <label for="company">Company / organisation</label>
-            <input id="company" name="company" autocomplete="organization">
+            <input id="company" name="company"
+              autocomplete="organization">
           </div>
 
           <div class="form-field">
             <label for="email">Email address *</label>
-            <input id="email" type="email" name="email" autocomplete="email" required>
+            <input id="email" type="email" name="email"
+              autocomplete="email" required>
           </div>
 
           <div class="form-field">
@@ -1491,7 +1745,8 @@ footer {
 
           <div class="form-field">
             <label for="country">Country</label>
-            <input id="country" name="country" autocomplete="country-name">
+            <input id="country" name="country"
+              autocomplete="country-name">
           </div>
 
           <div class="form-field">
@@ -1509,30 +1764,40 @@ footer {
           <div class="form-field full">
             <label for="message">How can we help? *</label>
             <textarea id="message" name="message"
-                      placeholder="Tell us briefly about your project or enquiry..."
-                      required></textarea>
+              placeholder="Tell us briefly about your project or enquiry..."
+              required></textarea>
           </div>
 
-          <input type="hidden" name="_subject" value="New enquiry — NCE SkyVolt Dynamics Ltd">
-          <input type="hidden" name="source" value="NCE SkyVolt Dynamics website">
+          <input type="hidden" name="_subject"
+            value="New enquiry — NCE SkyVolt Dynamics Ltd">
+
+          <input type="hidden" name="source"
+            value="NCE SkyVolt Dynamics website">
 
           <div class="form-field full">
-            <button class="btn btn-primary" type="submit" id="submitBtn">Send Enquiry ↗</button>
-            <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+            <button class="btn btn-primary" type="submit" id="submitBtn">
+              Send Enquiry ↗
+            </button>
+            <p id="formStatus" class="form-status"
+              role="status" aria-live="polite"></p>
           </div>
+
         </div>
       </form>
+
     </div>
   </div>
 </section>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="container">
+
     <div class="footer-top">
       <a class="footer-brand" href="#home">
-        <img src="logo.jpg" alt="">
+        <img src="logo.jpg" alt="NCE SkyVolt Dynamics logo">
         <span>
           <strong>NCE SKYVOLT DYNAMICS LTD</strong>
           <small>ENERGY • INNOVATION • RELIABILITY</small>
@@ -1544,23 +1809,29 @@ footer {
         <a href="#services">Solutions</a>
         <a href="#projects">Our Work</a>
         <a href="#partnerships">Partnerships</a>
+        <a href="#leadership">Leadership</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
 
     <div class="footer-bottom">
-      <span>© <span id="year"></span> NCE SkyVolt Dynamics Ltd. All rights reserved.</span>
+      <span>
+        © <span id="year"></span> NCE SkyVolt Dynamics Ltd.
+        All rights reserved.
+      </span>
       <span>Engineering • Energy • Technology</span>
     </div>
+
   </div>
 </footer>
 
+<!-- FLOATING WHATSAPP -->
 <a class="wa"
-   href="https://wa.me/2349039376516?text=Hello%20NCE%20SkyVolt%20Dynamics%20Ltd.%20I%20would%20like%20to%20make%20an%20enquiry."
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Chat with NCE SkyVolt on WhatsApp"
-   title="Chat with us on WhatsApp">✆</a>
+  href="https://wa.me/2349039376516?text=Hello%20NCE%20SkyVolt%20Dynamics%20Ltd.%20I%20would%20like%20to%20make%20an%20enquiry."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with NCE SkyVolt on WhatsApp"
+  title="Chat with us on WhatsApp">✆</a>
 
 <script>
 /* Mobile navigation */
@@ -1569,8 +1840,12 @@ const navLinks = document.getElementById("navLinks");
 
 menuToggle.addEventListener("click", () => {
   const isOpen = navLinks.classList.toggle("open");
+
   menuToggle.setAttribute("aria-expanded", String(isOpen));
-  menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+  menuToggle.setAttribute(
+    "aria-label",
+    isOpen ? "Close navigation" : "Open navigation"
+  );
   menuToggle.textContent = isOpen ? "×" : "☰";
 });
 
@@ -1583,7 +1858,7 @@ navLinks.querySelectorAll("a").forEach(link => {
   });
 });
 
-/* Reveal sections as the visitor scrolls */
+/* Reveal sections as visitors scroll */
 const revealElements = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window) {
@@ -1594,17 +1869,18 @@ if ("IntersectionObserver" in window) {
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.10 });
 
   revealElements.forEach(element => observer.observe(element));
 } else {
   revealElements.forEach(element => element.classList.add("visible"));
 }
 
-/* Footer year */
-document.getElementById("year").textContent = new Date().getFullYear();
+/* Automatically update the footer year */
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 
-/* Contact form submission through the existing Formspree endpoint */
+/* Contact form submission */
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
 const submitBtn = document.getElementById("submitBtn");
@@ -1613,8 +1889,8 @@ contactForm.addEventListener("submit", async event => {
   event.preventDefault();
 
   formStatus.textContent = "Sending your enquiry...";
+  formStatus.style.color = "#66758a";
   submitBtn.disabled = true;
-  submitBtn.style.opacity = ".7";
 
   try {
     const response = await fetch(contactForm.action, {
@@ -1623,20 +1899,23 @@ contactForm.addEventListener("submit", async event => {
       headers: { "Accept": "application/json" }
     });
 
-    if (response.ok) {
-      formStatus.textContent = "Thank you. Your enquiry has been submitted.";
-      formStatus.style.color = "#16794b";
-      contactForm.reset();
-    } else {
-      throw new Error("The form service did not accept the submission.");
+    if (!response.ok) {
+      throw new Error("The form submission failed.");
     }
+
+    formStatus.textContent =
+      "Thank you. Your enquiry has been submitted.";
+    formStatus.style.color = "#16794b";
+
+    contactForm.reset();
+
   } catch (error) {
     formStatus.style.color = "#b42332";
     formStatus.textContent =
-      "We couldn't submit the form just now. Please email nceskyvoltdynamics@gmail.com or contact us on WhatsApp.";
+      "We couldn't submit the form just now. Please email " +
+      "nceskyvoltdynamics@gmail.com or contact us on WhatsApp.";
   } finally {
     submitBtn.disabled = false;
-    submitBtn.style.opacity = "1";
   }
 });
 </script>
